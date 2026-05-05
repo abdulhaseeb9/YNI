@@ -662,30 +662,55 @@ section{padding:80px 0}
   line-height:1.6;
 }
 
-/* MODAL MENTOR IMAGE (UPDATED) */
-.modal-mentor-img-wrap{
-  width:130px;
-  height:130px;
-  margin:0 auto 15px;
-  border-radius:50%;
-  padding:5px;
-  background:linear-gradient(135deg,var(--primary),var(--accent));
-  box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
-.modal-mentor-img{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  object-fit:cover;
-  border:3px solid #fff;
-  display:block;
+/* ========== MENTOR MODAL - CENTER IMAGE FIX ========== */
+.modal-content {
+  text-align: center;   /* centers all inner content */
 }
 
-@media(max-width:480px){
-  .mentor-img-wrap{width:110px;height:110px}
-  .modal-mentor-img-wrap{width:110px;height:110px}
+.modal-img-wrap {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px auto;   /* perfect horizontal center */
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.modal-img-wrap img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;   /* focuses on the face */
+  border: 4px solid #fff;
+  display: block;
+}
+
+/* If your modal uses a different image class, also apply: */
+.modal-content img.mentor-modal-img,
+.modal-body img {
+  display: block;
+  margin: 0 auto 20px auto;   /* centers image horizontally */
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 20%;
+  border: 5px solid #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Center modal text content too */
+.modal-content h2,
+.modal-content h3,
+.modal-content p {
+  text-align: center;
+}
 /* FEEDBACK */
 .feedback{background:linear-gradient(135deg,#f7f8fc 0%,#e9ecf5 100%);overflow:hidden}
 .feedback-slider{overflow:hidden;position:relative;max-width:1200px;margin:auto;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
