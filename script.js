@@ -14,7 +14,7 @@ const courses = [
       "Recording & Slides Provided",
       "Teacher Support in Premium Group",
       "Q/A in Session + E-Certificate",
-      "650+ Student Community Access"
+      "950+ Student Community Access"
     ],
     outline: [
       "Introduction to Research",
@@ -49,7 +49,7 @@ const courses = [
       "Recording & Slides Provided",
       "Teacher Support in Premium Group",
       "Q/A in Session + E-Certificate",
-      "650+ Student Community Access"
+      "950+ Student Community Access"
     ],
     outline: [
       "Preparing and Coding Data in Excel",
@@ -79,7 +79,7 @@ const courses = [
       "Recording & Slides Provided",
       "Teacher Support in Premium Group",
       "Q/A in Session + E-Certificate",
-      "Tools: ChatGPT, Jenni, Turnitin, Grammarly, QuillBot"
+      "Tools: ChatGPT, Jenni, Turnitin, Grammarly, QuillBot and many more..."
     ],
     outline: [
       "Finding a Research Topic with AI",
