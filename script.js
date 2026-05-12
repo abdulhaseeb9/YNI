@@ -4,7 +4,7 @@ const courses = [
   {
     id: 1,
     title: "Research Methodology",
-    badge: "Batch 17",
+    badge: "Batch 18",
     mentor: "Dr. Yaseen Khan",
     fee: "PKR 4,999",
     demo: "https://drive.google.com/file/d/14w7qBzoE7cU7ISmH1WAz909VcptlXssZ/view?usp=sharing",
@@ -97,7 +97,7 @@ const courses = [
   {
     id: 4,
     title: "Graphic Designing & Video Editing (Canva)",
-    badge: "Batch 2",
+    badge: "Batch 3",
     mentor: "Moazzma Muratab",
     fee: "PKR 2,999",
     demo: null,
