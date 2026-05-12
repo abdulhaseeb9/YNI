@@ -491,18 +491,55 @@ section{padding:80px 0}
 }
 .course-fee i{margin-right:6px;color:var(--accent)}
 
-/* Hover Features Box */
+/* ========== STATIC COURSE FEATURES (ALWAYS VISIBLE) ========== */
 .course-hover-features{
   background:linear-gradient(135deg,#fff 0%,#f7f8fc 100%);
   border-left:4px solid var(--accent);
   border-radius:10px;
   padding:15px;
   margin-bottom:15px;
-  max-height:80px;
-  overflow:hidden;
-  transition:all .5s ease;
+  max-height:none;            /* always full height */
+  overflow:visible;           /* fully visible */
   position:relative;
   flex-grow:1;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+.course-hover-features h4{
+  color:var(--primary);
+  font-size:14px;
+  margin-bottom:10px;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.course-hover-features h4 i{color:var(--accent)}
+.course-hover-features ul{
+  list-style:none;
+  opacity:1;                  /* always fully visible */
+}
+.course-hover-features ul li{
+  padding:5px 0;
+  font-size:13px;
+  color:#444;
+  display:flex;
+  align-items:flex-start;
+  gap:8px;
+  line-height:1.5;
+}
+.course-hover-features ul li i{
+  color:var(--accent);
+  font-size:14px;
+  margin-top:2px;
+  flex-shrink:0;
+}
+
+/* Remove all hover-based reveal effects */
+.course-card:hover .course-hover-features{
+  max-height:none;
+  box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+.course-card:hover .course-hover-features ul{
+  opacity:1;
 }
 .course-hover-features h4{
   color:var(--primary);
@@ -545,36 +582,49 @@ section{padding:80px 0}
 
 .course-btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
 
-/* Buttons */
+/* ========== COURSE BUTTONS ========== */
+
+/* View Outline (Primary) — match Badge orange */
+.course-btns .btn-primary{
+  background:#1a2a6c;
+  color:#fff !important;
+  border:none;
+  box-shadow:0 4px 10px rgba(45, 87, 255, 0.3);
+}
+.course-btns .btn-primary:hover{
+  background:linear-gradient(135deg,#e06820,#cc5a14);
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(255,122,45,.5);
+}
+
+/* Demo Button (keep dark blue) */
 .btn-demo{
   background:#1a2a6c;
   color:#fff !important;
 }
 .btn-demo:hover{
-  background:#1a2a6c;
+  background:#0f1c4d;
   transform:translateY(-3px);
   box-shadow:0 8px 20px rgba(31, 46, 60, 0.4);
 }
+
+/* Enroll Button — match Badge orange */
 .btn-enroll{
-  background:#25d366;
+  background:linear-gradient(135deg,#ff7a2d,#e06820);
   color:#fff !important;
+  box-shadow:0 4px 10px rgba(255,122,45,.3);
 }
 .btn-enroll:hover{
-  background:#1ebe57;
+  background:linear-gradient(135deg,#e06820,#cc5a14);
   transform:translateY(-3px);
-  box-shadow:0 8px 20px rgba(37,211,102,.4);
+  box-shadow:0 8px 20px rgba(255,122,45,.5);
+  
 }
-
-/* Mobile — Always show features (no hover on touch) */
 @media(max-width:768px){
-  .course-hover-features{max-height:500px}
-  .course-hover-features ul{opacity:1}
   .course-card h3{padding-right:75px;font-size:18px}
   .course-btns .btn{flex:1;min-width:calc(50% - 5px);font-size:12px;padding:9px 12px}
 }
-@media(max-width:480px){
-  .course-btns .btn{min-width:100%}
-}
+
 
 /* ========== MENTORS (UPDATED WITH PICTURES) ========== */
 .mentor-grid{
